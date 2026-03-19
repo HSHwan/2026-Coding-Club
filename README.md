@@ -32,8 +32,8 @@
 ### 작업 흐름 (Workflow)
 0. 레포지토리를 로컬에 `Clone` 합니다. (최초 1회만 실행)
 ```bash
-git clone [레포지토리 URL]
-cd [생성된 폴더명]
+git clone https://github.com/HSHwan/2026-Coding-Club.git
+cd 2026-Coding-Club
 ```
 
 1. 매주 최신 `main` 브랜치를 받아온 후, 본인의 브랜치를 생성하여 작업합니다. (예: `feature/suhwan-week01`)
