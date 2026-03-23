@@ -32,7 +32,7 @@
 ### 작업 흐름 (Workflow)
 0. 레포지토리 Fork 및 Clone (최초 1회)
 - 중앙 레포지토리 우측 상단의 `Fork` 버튼을 눌러 본인의 깃허브 계정으로 복사해 갑니다.
-- 복사된 **본인 계정의 레포지토리(origin)**를 로컬 PC로 Clone 합니다.
+- 복사된 본인 계정의 레포지토리(origin)를 로컬 PC로 Clone 합니다.
 ```bash
 git clone [본인 계정으로 Fork한 레포지토리 URL]
 cd [생성된 폴더명]
