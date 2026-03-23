@@ -27,32 +27,42 @@
 
 ## 🌿 깃허브 협업 및 PR 규칙
 
-`main` 브랜치로의 직접 Push를 제한하며, 반드시 **Pull Request**를 통한 리뷰 후 병합(Merge)합니다.
+중앙 레포지토리에 직접 Push하지 않고, 각자의 계정으로 **Fork**하여 작업한 뒤 중앙 레포지토리로 **Pull Request**를 보내는 방식을 사용합니다.
 
 ### 작업 흐름 (Workflow)
-0. 레포지토리를 로컬에 `Clone` 합니다. (최초 1회만 실행)
+0. 레포지토리 Fork 및 Clone (최초 1회)
+- 중앙 레포지토리 우측 상단의 `Fork` 버튼을 눌러 본인의 깃허브 계정으로 복사해 갑니다.
+- 복사된 **본인 계정의 레포지토리(origin)**를 로컬 PC로 Clone 합니다.
 ```bash
-git clone https://github.com/HSHwan/2026-Coding-Club.git
-cd 2026-Coding-Club
+git clone [본인 계정으로 Fork한 레포지토리 URL]
+cd [생성된 폴더명]
+```
+- 다른 팀원들의 코드가 병합된 최신 상태를 받아오기 위해 중앙 레포지토리를 `upstream`으로 추가합니다.
+```bash
+git remote add upstream https://github.com/HSHwan/2026-Coding-Club.git
+git remote -v  # origin과 upstream이 잘 연결되었는지 확인
 ```
 
-1. 매주 최신 `main` 브랜치를 받아온 후, 본인의 브랜치를 생성하여 작업합니다. (예: `feature/suhwan-week01`)
+1. 매주 과제 진행 전 최신화 및 브랜치 생성
+- 과제를 시작하기 전, 항상 중앙 저장소의 최신 코드를 내 로컬로 가져온 후 새로운 브랜치를 팝니다.
 ```bash
 git checkout main                # 기준이 되는 main 브랜치로 이동
-git pull origin main             # 원격 저장소의 최신 상태를 로컬에 반영
-git checkout -b feature/[본인아이디]-[주차]  # 새 브랜치 생성 및 이동
+git pull upstream main           # 중앙 저장소의 최신 내용을 로컬 main에 반영
+git checkout -b feature/[주차]    # 새 브랜치 생성 및 이동
 ```
 *(참고: 최신 Git 버전에서는 `checkout` 대신 `switch` 와 `switch -c` 를 사용하셔도 됩니다.)*
 
-2. 코드를 작성하고 커밋 규칙에 맞춰 원격 저장소에 `Push` 합니다.
+2. 코드 작성 및 본인 저장소(origin)로 Push
+- 코드를 작성하고 커밋 규칙에 맞춰 본인 원격 저장소에 `Push` 합니다.
 ```bash
 git add .                        # 변경된 전체 파일 스테이징 (또는 git add [파일명])
 git commit -m "feat: BOJ_10828_스택"   # 커밋 메시지 작성
 git push origin feature/[본인아이디]-[주차]  # 생성한 본인 브랜치로 원격 저장소에 Push
 ```
 
-3. 깃허브 웹사이트로 이동하여 `main` 브랜치로 **Pull Request**를 생성하고 템플릿에 맞춰 내용을 작성합니다.
-*(`Push` 후 깃허브 레포지토리에 접속하면 나타나는 'Compare & pull request' 초록색 버튼을 클릭합니다.)*
+3. Pull Request 생성
+- 본인의 깃허브 레포지토리(origin)로 이동하여 `Compare & pull request` 버튼을 누릅니다.
+- `base repository: 중앙 레포지토리(main)` ← `head repository: 내 레포지토리(feature/week01)` 방향을 확인한 후 템플릿에 맞춰 PR을 생성합니다.
 
 4. 오프라인 모임에서 코드 리뷰를 받고 승인을 얻은 뒤 `Merge` 합니다.
 
