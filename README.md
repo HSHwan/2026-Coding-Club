@@ -55,9 +55,9 @@ git checkout -b feature/[주차]    # 새 브랜치 생성 및 이동
 2. 코드 작성 및 본인 저장소(origin)로 Push
 - 코드를 작성하고 커밋 규칙에 맞춰 본인 원격 저장소에 `Push` 합니다.
 ```bash
-git add .                        # 변경된 전체 파일 스테이징 (또는 git add [파일명])
+git add .                             # 변경된 전체 파일 스테이징 (또는 git add [파일명])
 git commit -m "feat: BOJ_10828_스택"   # 커밋 메시지 작성
-git push origin feature/[본인아이디]-[주차]  # 생성한 본인 브랜치로 원격 저장소에 Push
+git push origin feature/[주차]         # 생성한 본인 브랜치로 원격 저장소에 Push
 ```
 
 3. Pull Request 생성
