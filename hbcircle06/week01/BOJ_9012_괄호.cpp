@@ -41,5 +41,8 @@ int main() {
         if (!st.empty()) {
             cout << "NO" << endl;
         }
+        if (st.empty()) {
+            cout << "YES" << endl;
+        }   
     }
 }
