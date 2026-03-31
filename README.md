@@ -48,7 +48,7 @@ git remote -v  # origin과 upstream이 잘 연결되었는지 확인
 ```bash
 git checkout main                # 기준이 되는 main 브랜치로 이동
 git pull upstream main           # 중앙 저장소의 최신 내용을 로컬 main에 반영
-git checkout -b feature/[주차]    # 새 브랜치 생성 및 이동
+git checkout -b [주차]            # 새 브랜치 생성 및 이동
 ```
 *(참고: 최신 Git 버전에서는 `checkout` 대신 `switch` 와 `switch -c` 를 사용하셔도 됩니다.)*
 
@@ -57,7 +57,7 @@ git checkout -b feature/[주차]    # 새 브랜치 생성 및 이동
 ```bash
 git add .                             # 변경된 전체 파일 스테이징 (또는 git add [파일명])
 git commit -m "feat: BOJ_10828_스택"   # 커밋 메시지 작성
-git push origin feature/[주차]         # 생성한 본인 브랜치로 원격 저장소에 Push
+git push origin [주차]                 # 생성한 본인 브랜치로 원격 저장소에 Push
 ```
 
 3. Pull Request 생성
@@ -78,6 +78,6 @@ git push origin feature/[주차]         # 생성한 본인 브랜치로 원격 
 *(예시: `feat: BOJ_10828_스택`, `refactor: PRO_43165_타겟넘버 시간복잡도 개선`)*
 
 ### PR (Pull Request) 제목 규칙
-> **[주차] 플랫폼_문제번호_문제명 - 본인이름**
+> **[주차] 플랫폼_문제번호_문제명**
 
-*(예시: `[Week01] BOJ_10828_스택 - 황수환`)*
+*(예시: `[Week01] BOJ_10828_스택`)*
