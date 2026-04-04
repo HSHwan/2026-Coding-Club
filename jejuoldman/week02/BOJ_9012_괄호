@@ -1,0 +1,15 @@
+n=int(input())
+for _ in range(n):
+    inp=input()
+    num=0
+    for elem in inp:
+        if elem=='(':
+            num+=1
+        elif elem==')':
+            num-=1
+        if num<0:
+            break
+    if num==0:
+        print('YES')
+    else:
+        print('NO')
